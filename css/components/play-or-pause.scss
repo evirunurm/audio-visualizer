@@ -1,0 +1,21 @@
+.play-or-pause {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  display: flex;
+}
+
+.pause-button {
+  display: none;
+}
+
+img {
+  width: 50px;
+  padding: 0 10px;
+}
+
+.stop-button {
+  display: none;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/addons/p5.sound.js"></script>
+    <link rel="stylesheet" href="./css/main.min.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+
+    <div id="choose_a_song_input_container" class="input-container">
+      <form id="choose_a_song_input" class="input" action="index.html" method="post">
+        <label for="file_selector" class="custom-file-upload">Upload your song</label>
+        <input class="input__file" id="file_selector" type="file">
+      </form>
+    </div>
+    <button id="choose_another_song_button" class="input__another-song" type="button" name="button">Wanna choose another song?</button>
+
+    <main>
+      <div class="controller" id="controller">
+        <div class="controller__input">
+          <label for="BIG_RADIUS_SIZE_FACTOR">BIG_RADIUS_SIZE_FACTOR = </label>
+          <input id="BIG_RADIUS_SIZE_FACTOR" type="text" name="" value="1.5">
+        </div>
+        <div class="controller__input">
+          <label for="LINES_AMOUNT_FACTOR">LINES_AMOUNT_FACTOR = </label>
+          <input id="LINES_AMOUNT_FACTOR" type="text" name="" value="2">
+        </div>
+        <div class="controller__input">
+          <label for="RADIUS"> RADIUS = </label>
+          <input id="RADIUS" type="text" name="" value="180">
+        </div>
+        <div class="controller__input">
+          <label for="VOLUME"> VOLUME = </label>
+          <input type="range" id="VOLUME" name="volume" min="0" max="1" value="0.5" step="0.05" </input>
+        </div>
+      </div>
+
+      <h2 id="play_or_pause_text" class="play-or-pause--warning"></h2>
+
+      <div id="play_or_pause" class="play-or-pause">
+        <img id="pause_button" class="play-or-pause--toggle pause-button" src="./assets/pause-button.svg" alt="Botón de Pausa">
+        <img id="play_button" class="play-or-pause--toggle play-button" src="./assets/play-button.svg" alt="Botón de Reanudado">
+        <img id="stop_button" class="stop--toggle stop-button" src="./assets/stop-button.svg" alt="Botón de Parar">
+      </div>
+
+      <div id="canvas">
+      </div>
+    </main>
+
+
+    <h1 id="p5_loading">Loading...</h1>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+
+</html>

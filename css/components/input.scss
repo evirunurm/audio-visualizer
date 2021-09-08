@@ -1,0 +1,50 @@
+$dark-color: #2b2b2b;
+$light-color: #dfdfdf;
+@mixin button {
+  border: 1px solid $dark-color;
+  color: $dark-color;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+@mixin button--hover {
+  background-color: $dark-color;
+  color: $light-color;
+}
+
+.input-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input__another-song {
+  @include button;
+  position: absolute;
+  //   top: 10px;
+  //   left: 10px;
+  //   padding: 0.5em 1em;
+  //   background-color: rgba(0, 0, 0, 0);
+  display: none;
+}
+//
+// .input__another-song:hover {
+//   @include button--hover;
+// }
+
+input.input__file {
+  display: none;
+}
+
+.custom-file-upload {
+  @include button;
+  // color: $dark-color;
+  // font-size: 2rem;
+  // padding: 0.4em 1em;
+}
+// .custom-file-upload:hover {
+//   @include button--hover;
+// }
